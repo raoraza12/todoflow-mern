@@ -1,0 +1,14 @@
+/*  "name": "mern-todo-notify",
+  "version": "1.0.0",
+  "description": "Full MERN Stack Todo App with Push Notifications — ready to deploy anywhere",
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
