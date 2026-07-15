@@ -1,0 +1,13 @@
+import axios from "axios";
+const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+const api = axios.create({ baseURL: API_BASE, headers: { "Content-Type": "application/json" } });
+export const fetchTodos = (params) => api.get("/todos", { params });
+export const fetchTodo = (id) => api.get(`/todos/${id}`);
+export const createTodo = (data) => api.post("/todos", data);
+export const updateTodo = (id, data) => api.put(`/todos/${id}`, data);
+export const deleteTodo = (id) => api.delete(`/todos/${id}`);
+export const fetchStats = () => api.get("/todos/meta/stats");
+export const getVapidPublicKey = () => api.get("/push/vapid-public-key");
+export const subscribePush = (sub) => api.post("/push/subscribe", sub);
+export const unsubscribePush = (ep) => api.delete("/push/unsubscribe", { data: { endpoint: ep } });
+export const notifyAll = (p) => api.post("/push/notify-all", p);
