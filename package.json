@@ -1,4 +1,5 @@
-/*  "name": "mern-todo-notify",
+{
+  "name": "mern-todo-notify",
   "version": "1.0.0",
   "description": "Full MERN Stack Todo App with Push Notifications — ready to deploy anywhere",
   "scripts": {
